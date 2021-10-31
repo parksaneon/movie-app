@@ -36,8 +36,8 @@ const SLink = styled(Link)`
   justify-content: center;
 `;
 
-export default () => (
-  <header>
+export default withRouter(({ location: { pathname } }) => (
+  <Header>
     <List>
       <Item current={pathname === "/"}>
         <SLink to="/">Movies</SLink>
@@ -49,5 +49,5 @@ export default () => (
         <SLink to="/search">Search</SLink>
       </Item>
     </List>
-  </header>
-);
+  </Header>
+));
