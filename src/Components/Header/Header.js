@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const List = styled.ul`
@@ -8,18 +9,22 @@ const List = styled.ul`
   }
 `;
 
+const Item = styled.li``;
+
+const SLink = styled(Link)``;
+
 const Header = () => (
   <header>
     <List>
-      <li>
-        <a href="/">Movies</a>
-      </li>
-      <li>
-        <a href="/tv">Tv</a>
-      </li>
-      <li>
-        <a href="/search">Search</a>
-      </li>
+      <Item>
+        <SLink to="/">Movies</SLink>
+      </Item>
+      <Item>
+        <SLink to="/tv">Tv</SLink>
+      </Item>
+      <Item>
+        <SLink to="/search">Search</SLink>
+      </Item>
     </List>
   </header>
 );
