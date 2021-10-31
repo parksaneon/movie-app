@@ -1,9 +1,16 @@
 import React from "react";
-import "Header.css";
+import styled from "styled-components";
+
+const List = styled.ul`
+  display: flex;
+  &:hover {
+    background-color: blue;
+  }
+`;
 
 const Header = () => (
-  <header className="nav">
-    <ul>
+  <header>
+    <List>
       <li>
         <a href="/">Movies</a>
       </li>
@@ -13,7 +20,7 @@ const Header = () => (
       <li>
         <a href="/search">Search</a>
       </li>
-    </ul>
+    </List>
   </header>
 );
 
