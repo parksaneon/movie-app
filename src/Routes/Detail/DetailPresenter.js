@@ -1,17 +1,13 @@
 import React from "react";
-import DetailPresenter from "./DetailPresenter";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-class DetailContainer extends React.Component {
-  state = {
-    result: null,
-    error: null,
-    loading: true,
-  };
+const DetailPresenter = ({ result, loading, error }) => null;
 
-  render() {
-    const { result, error, loading } = this.state;
-    return <DetailPresenter result={result} error={error} loading={loading} />;
-  }
-}
+DetailPresenter.propTypes = {
+  result: PropTypes.object,
+  loading: PropTypes.bool.isRequired,
+  error: PropTypes.string,
+};
 
-export default DetailContainer;
+export default DetailPresenter;
