@@ -7,19 +7,6 @@ const Container = styled.div`
   font-size: 12px;
 `;
 
-const ImageContainer = styled.div`
-  margin-bottom: 5px;
-  position: relative;
-  &:hover {
-    ${Image} {
-      opacity: 0.3;
-    }
-    ${Rating} {
-      opacity: 1;
-    }
-  }
-`;
-
 const Image = styled.div`
   background-image: url(${(props) => props.bgUrl});
   height: 180px;
@@ -35,6 +22,19 @@ const Rating = styled.span`
   position: absolute;
   opacity: 0;
   transition: opacity 0.1s linear;
+`;
+
+const ImageContainer = styled.div`
+  margin-bottom: 5px;
+  position: relative;
+  &:hover {
+    ${Image} {
+      opacity: 0.3;
+    }
+    ${Rating} {
+      opacity: 1;
+    }
+  }
 `;
 
 const Title = styled.span`
@@ -58,6 +58,7 @@ const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => (
               : require("../assets/noPosterSmall.png")
           }
         />
+
         <Rating>
           <span role="img" aria-label="rating">
             ⭐️
